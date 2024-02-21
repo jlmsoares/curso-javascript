@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>Sistema de indentificação</h1>
+    Digite aqui o seu país: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="identificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function identificar() {
+            var pais = document.querySelector('input#txtpais')
+            var res = document.querySelector('div#res')
+            var txt = (pais.value)
+            res.innerHTML = `<p>Você atualmente está morando em ${txt}!</p>`
+            if (txt == 'Brasil') {
+                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            }else {
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
